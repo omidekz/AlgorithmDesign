@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class AlgoD_1 {
+public class sugColor {
     private static final String BLACK = "B", RED = "R",YELLOW ="Y",GREEN = "G";
     private static final int ANS_LENGTH = 4;
     private static final String INRIGHTPLACE="In Right Place >> ";
