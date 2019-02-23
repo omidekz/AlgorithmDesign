@@ -1,9 +1,15 @@
+//package my.AlgorithmDesign;
+
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Vector;
 
 public class MergeSort {
     public static void main(String[] args) {
+        int[] array = getAnArray();
+        System.out.println(Arrays.toString(mergeSort(array)));
+    }
+    static int[] getAnArray(){
         System.out.println("Enter n Number \n[seprate with space, enter 'f' for sort]:");
         Vector<Integer> nums = new Vector<>();
         String nu;
@@ -15,14 +21,11 @@ public class MergeSort {
             if(!nu.equals(""))
                 nums.add(Integer.valueOf(nu.trim()));
         }
-        System.out.println(Arrays.toString(mergeSort(nums.toArray(new Integer[]{}))));
-    }
-    static int[] mergeSort(Integer[] nums){
-        int[] num = new int[nums.length];
-        for (int i = 0; i < num.length; i++) {
-            num[i]=nums[i];
+        int[] tmp = new int[nums.size()];
+        for (int i = 0; i < tmp.length; i++) {
+            tmp[i] = nums.get(i);
         }
-        return mergeSort(num);
+        return tmp;
     }
     static int[] mergeSort(int[] nums){
         return   mergeSort(0,nums.length-1,nums);
