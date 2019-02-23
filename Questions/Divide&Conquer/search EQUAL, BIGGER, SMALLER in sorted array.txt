@@ -1,0 +1,22 @@
+Given array of sorted integer, search key and search preferences find array position. A search preferences can be:
+1) EQUAL – search only for equal key or -1 if not found. It’s a regular binary search.
+2) EQUAL_OR_SMALLER – search only for equal key or the closest smaller. -1 if not found.
+3) EQUAL_OR_BIGGER – search only for equal key or the closest bigger. -1 if not found.
+
+	*************************************************
+	*Examples:					*
+	*						*	
+	*Input : { 0, 2, 4, 6 }, key -1, EQUAL 		*
+	*Output : -1					*
+	*						*
+	*Input : { 0, 2, 4, 6 }, key -1, EQUAL_OR_BIGGER*
+	*Output : 0					*
+	*						*
+	*Input : { 0, 2, 4, 6 }, key 7, EQUAL_OR_BIGGER *
+	*Output : -1					*
+	*						*
+	*Input : { 0, 2, 4, 6 }, key 7, EQUAL_OR_SMALLER*
+	*Output : 3					*
+*********************************************************************
+* srcLink = https://www.geeksforgeeks.org/basic/divide-and-conquer/ *
+*********************************************************************
