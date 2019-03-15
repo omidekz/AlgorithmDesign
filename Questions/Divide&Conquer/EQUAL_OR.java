@@ -1,4 +1,4 @@
-package my.AlgorithmDesign;
+//package my.AlgorithmDesign;
 
 import java.util.Scanner;
 import java.util.Vector;
