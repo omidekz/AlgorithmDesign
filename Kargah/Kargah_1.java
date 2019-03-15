@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class BruteForce_pass {
+public class Kargah_1 {
     private static int[] foundedDigits = new int[10];
     private static int foundedDigitsCounter=0;
     private final static int[] _TIMES = {20,16,12,8,4,0};
@@ -11,7 +11,6 @@ public class BruteForce_pass {
     public static void main(String[] args) {
         firstSuggests();
         Vector<Integer[]> states = makeAllStates();
-//        printVector(states); for use, uncomment its method
         int lastTime;
         Integer[] bestExperience;
         int firstSug = new Random().nextInt(states.size());
@@ -23,15 +22,7 @@ public class BruteForce_pass {
         states.remove(firstSug);
         int counter = 1;
         do {
-            // 22156
-            // 45452
-            // 70000
-            // 36152
-            // 98175
-            // 54231
-
             Integer[] tmp = getASuggest(states,bestExperience,lastTime);
-//            System.out.println("bestEXP: "+Arrays.toString(bestExperience)+" "+lastTime);
             System.out.println(++counter+" - "+Arrays.toString(tmp) /*+ " "+calcTime(bestExperience,tmp)*/);
             int time = sc.nextInt();
             if(time<lastTime){
@@ -70,13 +61,6 @@ public class BruteForce_pass {
         }
         return c;
     }
-
-//    private static void printVector(Vector<Integer[]> states) {
-//        int c=0;
-//        for (Integer[] state : states) {
-//            System.out.println(++c + "-" + Arrays.toString(state));
-//        }
-//    }
 
     private static Vector<Integer[]> makeAllStates() {
         Vector<Integer[]> states = new Vector<>();
